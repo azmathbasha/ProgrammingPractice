@@ -89,10 +89,10 @@ public class SlidingPuzzle {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
                 if (i == SIZE - 1 && j == SIZE - 1) {
-                    return puzzle[i][j] == 0;
+                    return puzzle[i][j] == 0; // return if last number is 0 or not
                 }
                 if (puzzle[i][j] != number++) {
-                    return false;
+                    return false;  // If the number is not in order from 1 - 8 return false
                 }
             }
         }
