@@ -36,7 +36,7 @@ public class SlidingPuzzle {
     private static void shufflePuzzle() {
         Random random = new Random();
         for (int i = 0; i < 100; i++) { // Shuffle the puzzle 100 times with random moves
-            int direction = random.nextInt(4);  // get random number from  1 - 4
+            int direction = random.nextInt(4);  // get random number from  0 - 3
             moveTile(direction);
         }
     }
