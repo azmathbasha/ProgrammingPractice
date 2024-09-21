@@ -35,8 +35,8 @@ public class SlidingPuzzle {
     // Shuffle the puzzle randomly
     private static void shufflePuzzle() {
         Random random = new Random();
-        for (int i = 0; i < 100; i++) {
-            int direction = random.nextInt(4);
+        for (int i = 0; i < 100; i++) { // Shuffle the puzzle 100 times with random moves
+            int direction = random.nextInt(4);  // get random number from  1 - 4
             moveTile(direction);
         }
     }
@@ -47,10 +47,10 @@ public class SlidingPuzzle {
         int newCol = emptyCol;
 
         switch (direction) {
-            case 0: newRow = emptyRow - 1; break; // UP
-            case 1: newRow = emptyRow + 1; break; // DOWN
-            case 2: newCol = emptyCol - 1; break; // LEFT
-            case 3: newCol = emptyCol + 1; break; // RIGHT
+            case 0: newRow = emptyRow - 1; break; // UP  - decrement row index value (Move to one row above in the matrix)
+            case 1: newRow = emptyRow + 1; break; // DOWN - increment row index value (Move to one row below in the matrix)
+            case 2: newCol = emptyCol - 1; break; // LEFT - decrement col index value (Move to one col left in the matrix)
+            case 3: newCol = emptyCol + 1; break; // RIGHT - increment row index value (Move to one col right in the matrix)
         }
 
         if (newRow >= 0 && newRow < SIZE && newCol >= 0 && newCol < SIZE) {
